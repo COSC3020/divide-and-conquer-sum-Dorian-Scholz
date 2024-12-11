@@ -25,3 +25,5 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+Answer: The runtime of the divideAndConquerSum algorithm is O(n). The recurrence relation for the algorithm is T(n)=3T(n/3 )+O(1),where dividing the array into three parts takes constant time and three recursive calls are made for subproblems of size n/3. Using the Master Theorem with a=3, b=3, and d=0, we find p=logsub3 3=1. Since d<p the dominant term is T(n)∈O(n^p)=O(n). The algorithm performs linear work at each level, and the total height of the recursion tree is logsub3 n resulting in linear scaling with input size.
